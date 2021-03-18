@@ -50,7 +50,6 @@ class Main extends PluginBase implements Listener
         $level = $player->getLevel();
         if ($player->isOnGround() and !$player->isUnderwater()) {
             if (self::$grave::isAbleToSpawnGrave($player)) {
-                var_dump(self::$grave::isAbleToSpawnGrave($player));
                 if ((empty(self::$settings->get('worlds'))) or (in_array($level->getFolderName(), self::$settings->get('worlds')))) {
                     self::$grave::spawnGrave($player);
                 }
