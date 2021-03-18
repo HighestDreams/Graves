@@ -1,0 +1,16 @@
+---
+# Timer to delete grave after spawned. (Default : 50 Seconds)
+timer: 50
+# Set players names to their graves. (Default: true)
+show-name: true
+# Graves spawn in which worlds? if you want graves spawn only in specific worlds, add world names like this format:
+#  worlds:
+#    - Lobby
+#    - Survival
+# Notice: Not sensive to uppercase / lowercase names...!
+# Notice2: Make sure your format is correct and world name is exists.
+# Notice3: If you don't write your world names, graves'll spawn in all worlds, when player die!
+worlds: []
+# Just a limitation for spawning graves, it means when spawned grave for dead player is still exist, it won't spawn another grave when player die.
+limit-spawn: false
+...
