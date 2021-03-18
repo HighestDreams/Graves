@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/HighestDreams/Graves
+build-by-default: true
+branches:
+- main
+projects:
+  Graves:
+    path: ""
+...
