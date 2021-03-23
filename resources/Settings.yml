@@ -1,4 +1,7 @@
 ---
+# Remove graves after few moments?
+# If you set this to false, the graves won't despawn after spawned!
+remove-graves: true
 # Timer to delete grave after spawned. (Default : 50 Seconds)
 timer: 50
 # Set players names to their graves. (Default: true)
