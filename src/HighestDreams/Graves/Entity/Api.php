@@ -48,7 +48,7 @@ class Api
         if (!Main::$settings->get('show-name')) {
             $npc->setNameTagAlwaysVisible(false);
         } else {
-            $npc->setNameTag("✞ {$player->getName()} ✞");
+            $npc->setNameTag("{$player->getName()}");
             $npc->setNameTagAlwaysVisible(true);
         }
         if (Main::$settings->get('limit-spawn') === true) {
