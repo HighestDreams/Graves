@@ -37,9 +37,9 @@ class Main extends PluginBase implements Listener
         self::$settings = new Config($this->getDataFolder() . 'Settings.yml');
         if (self::$settings->get('remove-graves') === true) {
             $this->getScheduler()->scheduleRepeatingTask(new Timer ($this), 20);
-            foreach (['Settings.yml', 'grave.png'] as $resources) {
-                $this->saveResource($resources);
-            }
+        }
+        foreach (['Settings.yml', 'grave.png'] as $resources) {
+            $this->saveResource($resources);
         }
     }
 
