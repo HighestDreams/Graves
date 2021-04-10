@@ -32,14 +32,14 @@ class Main extends PluginBase implements Listener
     {
         self::$getInstance = $this;
         self::$grave = new Api ($this);
-        Entity::registerEntity(Grave::class, true);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        Entity::registerEntity(Grave::class, true);
+        foreach (['Settings.yml', 'grave.png'] as $resources) {
+            $this->saveResource($resources);
+        }
+        self::$settings = new Config($this->getDataFolder() . 'Settings.yml');
         if (self::$settings->get('remove-graves') === true) {
             $this->getScheduler()->scheduleRepeatingTask(new Timer ($this), 20);
-            foreach (['Settings.yml', 'grave.png'] as $resources) {
-                $this->saveResource($resources);
-            }
-            self::$settings = new Config($this->getDataFolder() . 'Settings.yml');
         }
     }
 
